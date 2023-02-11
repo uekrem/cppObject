@@ -33,4 +33,19 @@ class car
         void    getage();
 };
 
+class math
+{
+    public:
+        static int  value;
+        //int       value;
+        static void total(int x)
+        {
+            cout << x + x + x << endl;
+        }
+        /*void total(int x)
+        {
+            cout << x + x + x << endl;
+        }*/
+};
+
 #endif

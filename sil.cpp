@@ -34,4 +34,6 @@ int main()
     car1.getmodel();
     car1.getyear();
     car1.getage();
+
+    math::total(5);
 }
