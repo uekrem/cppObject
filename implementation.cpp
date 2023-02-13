@@ -1,6 +1,6 @@
 #include "sil.h"
 
-            //CLASS STUUDENT2
+            //CLASS STUDENT2
 void    student2::getno()
 {
     cout << "Nesnenin No:" << student2::no << endl;
