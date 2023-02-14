@@ -8,7 +8,7 @@ class student
         int     no;
         void    getname()
         {
-            cout<< "Nesnemizin Adı:" << name << endl;
+            cout<< "Nesnemizin Adi:" << name << endl;
         }
 };
 
