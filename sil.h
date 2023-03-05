@@ -12,14 +12,6 @@ class student2
         void    getno();
 };
 
-class student3
-{
-    public:
-        string  name;
-        int     no;
-        void    getno();
-};
-
 class car
 {
     private:
