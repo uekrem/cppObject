@@ -3,14 +3,14 @@
 
 #include <iostream>
 using namespace std;
-/*
+
 class student2
 {
     public:
         string  name;
         int     no;
         void    getno();
-};*/
+};
 
 class student3
 {
