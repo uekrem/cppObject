@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-class student2
+class student
 {
     public:
         string  name;
