@@ -9,6 +9,7 @@ class student2
     public:
         string  name;
         int     no;
+        int     no2;
         void    getno();
 };
 
