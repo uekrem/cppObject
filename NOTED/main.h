@@ -13,12 +13,18 @@ class user2 {
     private:
         std::string  name;
         int     id;
-    public:
 
+    public:
+        user2(){
+            std::cout << "const calisti" << std::endl;
+        }
         user2(std::string name, int id){
             this->name = name;
             this->id = id;
         };
+        ~user2(){
+            std::cout << "distor calisti" << std::endl;
+        }
         //Burada bir Constructor tanımladık . Bununla birlikte nesne oluşturulurken içerisine "set" ihtiyaç duymadan tüm atamaları yapabiliyoruz . (HEADER ONEMLI)
         //Class adıyla birebir aynı olmalı ve return değeri olmamalıdır .
         //Burada bulunan "this->" bir metot veya constructor içerisinde class özelliğinin ve argüman isminin aynı olması durumunda hangisini hangisine atacağını bilememesinden

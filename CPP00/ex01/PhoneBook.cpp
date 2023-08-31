@@ -61,11 +61,11 @@ void    PhoneBook::SEARCH(){
     std::cin >> index;
     if ((index >= 1 && index <= 8) && index <= PhoneBook::personCount)
     {
-        std::cout << PhoneBook::person[index - 1].getfirst_n() << std::endl;
-        std::cout << PhoneBook::person[index - 1].getlast_n() << std::endl; 
-        std::cout << PhoneBook::person[index - 1].getnumber() << std::endl; 
-        std::cout << PhoneBook::person[index - 1].gettag() << std::endl; 
-        std::cout << PhoneBook::person[index - 1].getsecret() << std::endl;   
+        std::cout << "First Name:" << PhoneBook::person[index - 1].getfirst_n() << std::endl;
+        std::cout << "Last Name:" << PhoneBook::person[index - 1].getlast_n() << std::endl; 
+        std::cout << "Number:" << PhoneBook::person[index - 1].getnumber() << std::endl; 
+        std::cout << "Tag:" << PhoneBook::person[index - 1].gettag() << std::endl; 
+        std::cout << "Secret:" << PhoneBook::person[index - 1].getsecret() << std::endl;   
     }
     else
         std::cout << "The entered index is wrong" << std::endl;

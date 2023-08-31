@@ -96,4 +96,11 @@ int main()
     
     //-----thisPointer-----
     //(HEADER dosyasını incele (usr2 CLASS))
+
+
+    //-----DESTRUCTOR-----
+    /* user2   admin;
+    //Sınıfın nesnesini stack bellekte (otomatik olarak) oluşturuyorsanız, nesne bu bloğun kapsamını terk ettiğinde (kapsam dışına çıktığında) yıkıcı otomatik olarak çağrılacaktır. 
+    //Bu durumda, nesneyi açıkça delete kullanarak silmeniz gerekmez, çünkü C++ bunu otomatik olarak yapar.
+    */
 }
