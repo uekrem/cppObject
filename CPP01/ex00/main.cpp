@@ -6,5 +6,6 @@ int main()
 
     monster = newZombie("p_name");
     monster->announce();
+    delete monster;
     randomChump("name");
 }
