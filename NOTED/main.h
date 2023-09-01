@@ -6,6 +6,13 @@ class user {
         int     id;
 
         void showInfo();
+        user(){
+            std::cout << "Constructor calisti" << std::endl;
+        }
+        ~user(){
+            std::cout << "Destructor calisti" << std::endl;
+        }
+
         //Implementasyon yapılması için prototip class icerisine yazilir.
 };
 
