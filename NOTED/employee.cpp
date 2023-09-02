@@ -18,3 +18,20 @@ void    user2::getName(){
 void    user2::getId(){
     std::cout << id << std::endl;
 }
+
+int cst::geta() const{
+    return (cst::a);
+}
+//const metotlar içerisinde ğişiklik yapılamaz . İçerisinde const olmayan fonksiyon çağrılamaz.
+
+void cst::seta(int a){
+    cst::a = a;
+}
+
+cst::cst(){
+    std::cout << "cst constructor" << std::endl;
+}
+
+cst::cst(int a){
+    cst::a = a;
+}

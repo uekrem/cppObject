@@ -43,3 +43,14 @@ class user2 {
 };
 //Kapsülleme yaparak atama yapılan değerleri kontrol ederek nesnelere özellikleri yerleştiririz .
 //private sadece class içerisinde erişip , çağırmamızı sağlar .
+
+class   cst{
+    private:
+        int a;
+    public:
+        cst();
+        cst(int a);
+        int     geta() const;
+        ////const metotlar içerisinde ğişiklik yapılamaz . İçerisinde const olmayan fonksiyon çağrılamaz.
+        void    seta(int a);
+};

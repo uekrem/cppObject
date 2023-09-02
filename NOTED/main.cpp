@@ -192,4 +192,21 @@ int main()
     özgü değil class yapısına özgü bir değişken olmuş oluyor . Her 
     nesnenin ortak bir değişkeni olmuş olur .
     */
+
+   //-----CONST-----
+    /*
+    const cst  one;
+    one.seta(5);
+    Burada böyle bir tanımlama olamaz . (FALSE) .Tanımlama işleminden sonra
+    değer ataması yapılamaz çünkü değiştirilemez .
+
+    const cst  one(10);
+    std::cout << one.geta() << std::endl;
+    Const değişkenler const tanımlanmış metotları çağırıp kullanabilir . Const olmadığı 
+    sürece metotları kullanamaz
+
+    cst two;
+    std::cout << two.geta() << std::endl;
+    Burada const olmayan bir değişken const metodunu kullanabilir .
+    */
 }
