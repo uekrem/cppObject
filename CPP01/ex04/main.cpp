@@ -54,4 +54,5 @@ int main(int argc, char **argv)
     input_file.close();
     ft_replace(read_barn, argv[2], argv[3]);
     new_file << read_barn;
+    new_file.close();
 }
