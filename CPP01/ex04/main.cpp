@@ -1,8 +1,21 @@
 #include "main.hpp"
 
-void    ft_replace()
+void    ft_replace(std::string &read_barn, std::string search, std::string new_word)
 {
+    int pos;
 
+    int sea_len = search.length();
+    int new_len = new_word.length();
+    pos = 0;
+    while (1)
+    {
+        pos = read_barn.find(search, pos);
+        if (pos == -1)
+            break;
+        read_barn.erase(pos, sea_len);
+		read_barn.insert(pos, new_word);
+		pos += new_len;
+    }
 }
 
 int ft_howmany(char **argv)
@@ -22,6 +35,8 @@ int main(int argc, char **argv)
     std::string read_barn;
     std::string read_temp;
 
+    if (argc != 4)
+        return (0);
     std::ifstream input_file(argv[1]);
     if (!input_file.is_open())
     {
@@ -37,5 +52,6 @@ int main(int argc, char **argv)
                 read_barn += '\n';
     }
     input_file.close();
-    ft_replace();
+    ft_replace(read_barn, argv[2], argv[3]);
+    new_file << read_barn;
 }
