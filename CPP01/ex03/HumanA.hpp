@@ -5,7 +5,7 @@
 
 class HumanA{
     private:
-        Weapon      *gun;
+        Weapon      &gun;
         std::string name;
     public:
         HumanA(std::string name, Weapon &gun);
