@@ -30,7 +30,7 @@ int main()
         ->GUN nope
    */
 
-    ///*
+    /*
     ak47    ak;
     pistol  ps;
     sniper  snp;
@@ -42,6 +42,6 @@ int main()
     //virtual doğru kullanımı
     std::cout << "----------------------" << std::endl;
     which_shot(&ps);
-    //*/
+    */
 
 }
