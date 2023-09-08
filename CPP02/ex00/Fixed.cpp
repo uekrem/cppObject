@@ -14,9 +14,9 @@ Fixed::Fixed(Fixed &now_fixed){ //& konulmama durumunda hata vermesini sor
     Fixed::fixed_number = now_fixed.fixed_number;
 }
 
-void    Fixed::operator = (Fixed &assign_fixed){
+Fixed    Fixed::operator = (Fixed &assign_fixed){
     std::cout << "Copy assignment operator called" << std::endl;
-    Fixed::fixed_number = assign_fixed.fixed_number;
+    return (assign_fixed);
 }
 
 int     Fixed::getRawBits(void) const{
