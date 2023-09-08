@@ -2,11 +2,18 @@
 #define FIXED_HPP
 
 #include <iostream>
-class   Fixed{
-    private:
 
+class Fixed{
+    private:
+        int     fixed_number;
+        static const int fixed_bit = 8;
     public:
-    
+        Fixed();
+        Fixed(Fixed &now_fixed);
+        ~Fixed();
+        Fixed operator = (Fixed &assign_fixed);
+        int getRawBits(void) const;
+        void setRawBits(int const raw);
 };
 
 #endif
