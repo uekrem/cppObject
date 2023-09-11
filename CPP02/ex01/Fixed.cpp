@@ -9,14 +9,26 @@ Fixed::~Fixed(){
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(Fixed &now_fixed){ //& konulmama durumunda hata vermesini sor
+Fixed::Fixed(Fixed const &now_fixed){ //& konulmama durumunda hata vermesini sor
     std::cout << "Copy constructor called" << std::endl;
     Fixed::fixed_number = now_fixed.fixed_number;
 }
 
-Fixed    Fixed::operator = (Fixed &assign_fixed){
+Fixed::Fixed(int num){
+    std::cout << "Int constructor called" << std::endl;
+    Fixed::fixed_number = num << fixed_bit;
+}
+
+Fixed::Fixed(float num){
+    std::cout << "Float constructor called" << std::endl;
+    Fixed::fixed_number = num * (1 << Fixed::fixed_bit);
+}
+
+void    Fixed::operator =(Fixed const &assign_fixed)
+{
     std::cout << "Copy assignment operator called" << std::endl;
-    return (assign_fixed);
+    Fixed::fixed_number = assign_fixed.fixed_number;
+    //return (*this);
 }
 
 int     Fixed::getRawBits(void) const{
@@ -26,4 +38,17 @@ int     Fixed::getRawBits(void) const{
 
 void    Fixed::setRawBits(int const raw){
     Fixed::fixed_number = raw;
+}
+
+float   Fixed::toFloat(void) const{
+    return ((float)Fixed::fixed_number / (float)(1 << Fixed::fixed_bit));
+}
+
+int Fixed::toInt(void) const{
+    return (Fixed::fixed_number >> fixed_bit);
+}
+
+std::ostream    &operator<< (std::ostream &out, Fixed  const &assign_fixed){
+    out << assign_fixed.toFloat();
+    return (out);
 }
