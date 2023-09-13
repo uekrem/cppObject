@@ -13,11 +13,11 @@ Fixed::Fixed(const Fixed &now_fixed){
 }
 
 Fixed::Fixed(int num){
-    Fixed::fixed_number = num << fixed_bit;
+    Fixed::fixed_number = num * pow(2,8);
 }
 
 Fixed::Fixed(float num){
-    Fixed::fixed_number = roundf(num * (1 << Fixed::fixed_bit));
+    Fixed::fixed_number = roundf(num * pow(2,8));
 }
 
 Fixed    &Fixed::operator=(Fixed const &assign_fixed)
@@ -35,11 +35,11 @@ void    Fixed::setRawBits(int const raw){
 }
 
 float   Fixed::toFloat(void) const{
-    return ((float)Fixed::fixed_number / (float)(1 << Fixed::fixed_bit));
+    return ((float)Fixed::fixed_number / (float)pow(2,8));
 }
 
 int Fixed::toInt(void) const{
-    return (Fixed::fixed_number >> fixed_bit);
+    return (Fixed::fixed_number / pow(2,8));
 }
 
 std::ostream    &operator<< (std::ostream &out, Fixed  const &assign_fixed){
