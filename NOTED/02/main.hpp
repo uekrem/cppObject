@@ -42,4 +42,25 @@ std::ostream &operator<<(std::ostream &out, curses &obj1) {
     return (out);
 }
 
+class dot{
+    private:
+    public:
+        dot();
+        dot(const dot &obj1);
+        dot    ft_empty(dot obj1);
+};
+
+dot    dot::ft_empty(dot obj1){
+    std::cout << &obj1 << std::endl;
+    return (obj1);
+}
+
+dot::dot()
+{
+}
+
+dot::dot(const dot &obj1)
+{
+    std::cout << "copy" << std::endl;
+}
 #endif

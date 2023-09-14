@@ -20,4 +20,8 @@ int main()
 
    std::cout << n1 << std::endl;
     */
+
+   dot n1;
+   dot n2;
+   n1 = n2;
 }
