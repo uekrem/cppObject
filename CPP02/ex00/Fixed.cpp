@@ -9,7 +9,7 @@ Fixed::~Fixed(){
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(Fixed &now_fixed){ //& konulmama durumunda hata vermesini sor
+Fixed::Fixed(const Fixed &now_fixed){ //& konulmama durumunda hata vermesini sor
     std::cout << "Copy constructor called" << std::endl;
     Fixed::fixed_number = now_fixed.fixed_number;
 }

@@ -11,7 +11,6 @@ Fixed::~Fixed(){
 
 Fixed::Fixed(const Fixed &now_fixed){
     std::cout << "Copy constructor called" << std::endl;
-    //Fixed::fixed_number = now_fixed.fixed_number;
     *this = now_fixed;
 }
 
@@ -42,7 +41,7 @@ void    Fixed::setRawBits(int const raw){
 }
 
 float   Fixed::toFloat(void) const{
-    return ((float)Fixed::fixed_number / (float)pow(2,8));
+    return (Fixed::fixed_number / pow(2,8));
 }
 
 int Fixed::toInt(void) const{

@@ -2,7 +2,7 @@
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
-    float bx,by,cx,cy,x,y;
+    float bx,by,cx,cy,x,y,d,WA,WB,WC;
 
     bx = b.getX().toFloat() - a.getX().toFloat();
     by = b.getY().toFloat() - a.getY().toFloat();
@@ -11,7 +11,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
     x = point.getX().toFloat() - a.getX().toFloat();
     y = point.getY().toFloat() - a.getY().toFloat();
 
-    float d,WA,WB,WC;
     d = bx*cy-cx*by;
     WA = (x*(by-cy) + y*(cx-bx) + bx *cy - cx*by) / d;
     WB = (x*cy - y*cx) /d;
