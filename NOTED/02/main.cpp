@@ -21,7 +21,14 @@ int main()
    std::cout << n1 << std::endl;
     */
 
-   dot n1;
-   dot n2;
-   n1 = n2;
+    dot n1;
+    std::cout << "---------" << std::endl;
+    dot n2;
+    n2.a = 2;
+    std::cout << "---------" << std::endl;
+    std::cout << &n2 << std::endl;
+    n2 = n1.danger(n2);
+    std::cout << &n2 << std::endl;
+    std::cout << "---------" << std::endl;
+    //std::cout << ptr << std::endl;
 }

@@ -8,7 +8,6 @@ Fixed::~Fixed(){
 }
 
 Fixed::Fixed(const Fixed &now_fixed){
-    //Fixed::fixed_number = now_fixed.fixed_number;
     *this = now_fixed;
 }
 

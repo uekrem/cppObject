@@ -24,7 +24,7 @@ Fixed::Fixed(float num){
     Fixed::fixed_number = roundf(num * pow(2,8));
 }
 
-Fixed    &Fixed::operator=(Fixed const &assign_fixed)
+const Fixed    &Fixed::operator=(Fixed const &assign_fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     Fixed::fixed_number = assign_fixed.fixed_number;
