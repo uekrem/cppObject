@@ -118,7 +118,8 @@ Fixed Fixed::operator++(int)
 
 Fixed Fixed::operator--(int)
 {
-	Fixed x = *this;
+	Fixed x;
+	x = *this;
 	--*this;
 	return (x);
 }

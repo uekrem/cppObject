@@ -9,13 +9,13 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &r)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->fixed_number = r.fixed_number;
+    this->fixed_number = r.getRawBits();
 }
 
-Fixed &Fixed::operator=(const Fixed &copyFixed)
+Fixed &Fixed::operator=(const Fixed &assign_fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    this->fixed_number = copyFixed.fixed_number;
+    this->fixed_number = assign_fixed.getRawBits();
     return (*this);
 }
 
