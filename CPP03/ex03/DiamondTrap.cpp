@@ -4,11 +4,11 @@ DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name"),FragTra
     DiamondTrap::name = name;
     DiamondTrap::hp = FragTrap::hp;
     DiamondTrap::energy = ScavTrap::energy;
-    DiamondTrap::damege = FragTrap::damege;
+    DiamondTrap::damage = FragTrap::damage;
 }
 
 DiamondTrap::~DiamondTrap(){
-    std::cout << DiamondTrap::name <<" DiamondTrap discturactor" << std::endl;
+    std::cout << DiamondTrap::name <<" DiamondTrap destructor" << std::endl;
 }
 
 void    DiamondTrap::whoAmI(){

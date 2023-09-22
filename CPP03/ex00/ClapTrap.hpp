@@ -8,7 +8,7 @@ class ClapTrap{
         std::string name;
         int         hp;
         int         energy;
-        int         damege;
+        int         damage;
     public:
         ClapTrap(std::string name);
         ~ClapTrap();

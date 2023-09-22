@@ -1,15 +1,15 @@
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(std::string name):ClapTrap(name){
-    std::cout << ScavTrap::name << " ScavTrap constractor" << std::endl;
+    std::cout << ScavTrap::name << " ScavTrap constructor" << std::endl;
     ScavTrap::hp = 100;
     ScavTrap::energy = 50;
-    ScavTrap::damege = 20;
+    ScavTrap::damage = 20;
 
 }
 
 ScavTrap::~ScavTrap(){
-    std::cout << ScavTrap::name <<" ScavTrap discturactor" << std::endl;
+    std::cout << ScavTrap::name <<" ScavTrap destructor" << std::endl;
 }
 
 void    ScavTrap::guardGate(){
@@ -20,7 +20,7 @@ void    ScavTrap::attack(const std::string &target){
     if (ClapTrap::hp > 0 && ClapTrap::energy > 0)
     {
         std::cout << "ScavTrap " << ClapTrap::name << " attacks " << target 
-        << ",causing " << ClapTrap::damege << " points of damage " << std::endl;
+        << ",causing " << ClapTrap::damage << " points of damage " << std::endl;
         ClapTrap::energy -= -1;
     }
     else

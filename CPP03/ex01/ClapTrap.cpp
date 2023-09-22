@@ -4,19 +4,19 @@ ClapTrap::ClapTrap(std::string  name){
     ClapTrap::name = name;
     ClapTrap::hp = 10;
     ClapTrap::energy = 10;
-    ClapTrap::damege = 0;
+    ClapTrap::damage = 0;
     std::cout << ClapTrap::name << " constructor" << std::endl;
 }
 
 ClapTrap::~ClapTrap(){
-    std::cout << ClapTrap::name << " disturactor" << std::endl;
+    std::cout << ClapTrap::name << " destructor" << std::endl;
 }
 
 void    ClapTrap::attack(const std::string &target){
     if (ClapTrap::hp > 0 && ClapTrap::energy > 0)
     {
         std::cout << "ClapTrap " << ClapTrap::name << " attacks " << target 
-        << ",causing " << ClapTrap::damege << " points of damage " << std::endl;
+        << ",causing " << ClapTrap::damage << " points of damage " << std::endl;
         ClapTrap::energy -= -1;
     }
     else
@@ -25,7 +25,7 @@ void    ClapTrap::attack(const std::string &target){
 void    ClapTrap::takeDamage(unsigned int amount){
     if (ClapTrap::hp <= 0 || ClapTrap::energy <= 0)
 		std::cout << ClapTrap::name << " no health or hit points already dead" << std::endl;
-    else if (amount > ClapTrap::hp)
+    else if (amount > (unsigned int)ClapTrap::hp)
 	{
 		std::cout << "ClapTrap " << ClapTrap::name << " takes " << amount << " damage and died" << std::endl;
 		ClapTrap::hp -= amount;
