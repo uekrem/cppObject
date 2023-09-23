@@ -8,6 +8,11 @@ ClapTrap::ClapTrap(std::string  name){
     std::cout << ClapTrap::name << " constructor" << std::endl;
 }
 
+ClapTrap::ClapTrap(){
+    ClapTrap::name = "none";
+	std::cout << ClapTrap::name << " constructor" << std::endl;
+}
+
 ClapTrap::~ClapTrap(){
     std::cout << ClapTrap::name << " destructor" << std::endl;
 }

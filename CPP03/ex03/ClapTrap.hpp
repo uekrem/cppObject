@@ -10,6 +10,7 @@ protected:
     int         energy;
     int         damage;
     public:
+        ClapTrap();
         ClapTrap(std::string name);
         ~ClapTrap();
         void attack(const std::string &target);
