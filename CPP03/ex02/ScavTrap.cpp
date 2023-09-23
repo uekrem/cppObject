@@ -2,6 +2,7 @@
 
 ScavTrap::ScavTrap(std::string name):ClapTrap(name){
     std::cout << ScavTrap::name << " ScavTrap constructor" << std::endl;
+    ScavTrap::name = name;
     ScavTrap::hp = 100;
     ScavTrap::energy = 50;
     ScavTrap::damage = 20;
