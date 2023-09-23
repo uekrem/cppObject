@@ -23,7 +23,9 @@ void    ClapTrap::attack(const std::string &target){
         std::cout << ClapTrap::name << " no health or hit points already dead" << std::endl;
 }
 void    ClapTrap::takeDamage(unsigned int amount){
-    if (ClapTrap::hp <= 0 || ClapTrap::energy <= 0)
+	if (amount < 0)
+		std::cout << "Is not a valid value" << std::endl;
+    else if (ClapTrap::hp <= 0 || ClapTrap::energy <= 0)
 		std::cout << ClapTrap::name << " no health or hit points already dead" << std::endl;
     else if (amount > (unsigned int)ClapTrap::hp)
 	{
@@ -38,7 +40,12 @@ void    ClapTrap::takeDamage(unsigned int amount){
 	}
 }
 void    ClapTrap::beRepaired(unsigned int amount){
-    if (ClapTrap::hp <= 0 || ClapTrap::energy <= 0)
+	if (amount < 0)
+	{
+		std::cout << "Is not a valid value" << std::endl;
+		return ;
+	}
+    else if (ClapTrap::hp <= 0 || ClapTrap::energy <= 0)
 	{
 		std::cout << ClapTrap::name << " no health or hit points already dead" << std::endl;
 		return ;
