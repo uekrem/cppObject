@@ -9,6 +9,10 @@ Animal::~Animal(){
     std::cout << "Animal destruct" << std::endl;
 }
 
-void    Animal::makeSound(){
+void    Animal::makeSound() const{
     std::cout << "none sound" << std::endl;
+}
+
+std::string Animal::getType() const{
+    return (this->type);
 }

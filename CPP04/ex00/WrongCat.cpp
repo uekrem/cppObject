@@ -9,6 +9,6 @@ WrongCat::~WrongCat(){
     std::cout << "WrongCat destruct" << std::endl;
 }
 
-void    WrongCat::makeSound(){
-    std::cout << "Meov" << std::endl;
+void    WrongCat::makeSound() const{
+    std::cout << "Wrong Meov" << std::endl;
 }
