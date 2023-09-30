@@ -22,5 +22,14 @@ int main()
         delete animals[i];
         std::cout << "-------------------\n" << std::endl;
     }
+
+    Dog basic;
+    
+    {
+
+    Dog tmp = basic;
+
+    }
+
     return 0;
 }

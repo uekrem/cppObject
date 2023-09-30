@@ -7,10 +7,12 @@
 
 class Cat : public Animal{
     private:
-        Brain *ptr_brain;
+        Brain *brain;
     public:
         Cat();
         ~Cat();
+        Cat &operator=(const Cat &r);
+        Cat(const Cat &r);
         void    makeSound() const;
 };
 

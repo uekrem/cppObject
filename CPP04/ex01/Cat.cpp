@@ -3,11 +3,27 @@
 Cat::Cat(){
     std::cout << "Cat construct" << std::endl;
     this->type = "Cat";
-    this->ptr_brain = new Brain();
+    this->brain = new Brain();
+}
+
+Cat::Cat(const Cat &r):Animal(r)
+{
+    this->type = r.type;
+    this->brain = new Brain(*r.brain);
+    std::cout << "Cat copy constructor called" << std::endl;
+}
+
+Cat &Cat::operator=(const Cat &r)
+{
+   if (this == &r)
+		return (*this);
+	*this = r;
+    this->brain = new Brain(*(r.brain));
+	return (*this);
 }
 
 Cat::~Cat(){
-    delete this->ptr_brain;
+    delete this->brain;
     std::cout << "Cat destruct" << std::endl;
 }
 
