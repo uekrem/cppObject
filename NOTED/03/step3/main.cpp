@@ -34,19 +34,25 @@ int main()
     ptr.ft_show();
     */
 
-    /*
-    Old3    r(3);
-    Old3    rr;
-    rr = r; 
-    std::cout << rr.base_int << std::endl;
-    std::cout << rr.old_int << std::endl;
-    std::cout << r.base_int << std::endl;
-    std::cout << r.old_int << std::endl;
+   /*
+    // Old3    r(3);
+    // Old3    rr;
+    // rr = r; 
+    // std::cout << rr.base_int << std::endl;
+    // std::cout << rr.old_int << std::endl;
+    // std::cout << r.base_int << std::endl;
+    // std::cout << r.old_int << std::endl;
+    Old3    r2(3);
+    Old3    rr2 = r2;
+    std::cout << rr2.base_int << std::endl;
+    std::cout << rr2.old_int << std::endl;
+    std::cout << r2.base_int << std::endl;
+    std::cout << r2.old_int << std::endl;
     //overloading işlem uygulandıysa miras aldığımız değerleri artı bir
         //şekilde çağırmamız gerekir . Yoksa miras aldığımız class değerlerini
             // birbirine atayamayız.
     */
-
+   
     /*
     Old3    r;
     Base3   *ptr;

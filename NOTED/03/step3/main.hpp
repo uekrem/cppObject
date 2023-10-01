@@ -47,6 +47,14 @@ class Base3{
         Base3(){
             base_int = 10;
         }
+        void    operator=(const Base3 &ref){
+            std::cout << "Base operator" << std::endl; 
+            this->base_int = ref.base_int;
+        }
+        Base3(const Base3 &r){
+            *this = r;
+            std::cout << "base copy" << std::endl; 
+        }
         virtual void    ft_print(){
             std::cout << "Base3 ft_print" << std::endl;
         }
@@ -73,7 +81,13 @@ class Old3 : public Base3{
             std::cout << "Old3 ft_show" << std::endl;
         }
         void    operator=(const Old3 &ref){
+            std::cout << "old operator" << std::endl; 
             this->old_int = ref.old_int;
+            Base3::operator=(ref);
+        }
+        Old3(const Old3 &r){
+            std::cout << "old copy" << std::endl; 
+            *this = r;
         }
 };
 
