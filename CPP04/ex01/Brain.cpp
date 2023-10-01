@@ -1,7 +1,8 @@
 #include "Brain.hpp"
 
-Brain::Brain(){
-    std::cout << "Brain Construct" << std::endl;
+Brain::Brain()
+{
+    std::cout << "Brain default constructor called" << std::endl;
 }
 
 Brain::Brain(const Brain &r)
@@ -18,6 +19,7 @@ Brain &Brain::operator=(const Brain &r)
     return (*this);
 }
 
-Brain::~Brain(){
-    std::cout << "Brain Destruct" << std::endl;
+Brain::~Brain()
+{
+    std::cout << "Brain destructor called" << std::endl;
 }
