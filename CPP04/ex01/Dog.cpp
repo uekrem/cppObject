@@ -10,7 +10,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &r):Animal(r)
 {
-    this->type = r.type;
+    this->type = r.getType();
     this->brain = new Brain(*(r.brain));
     std::cout << "Dog copy constructor called" << std::endl;
 }
