@@ -22,10 +22,13 @@ int main()
         std::cout << "-----------------\n" << std::endl;
         delete animals[i];
     }
-
+    std::cout << "-----------------\n" << std::endl;
     Dog basic;
+    std::cout << "-----------------\n" << std::endl;
     {
         Dog tmp = basic;
+        std::cout << "-----------------\n" << std::endl;
     }
+    std::cout << "-----------------\n" << std::endl;
     return 0;
 }

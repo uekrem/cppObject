@@ -8,9 +8,9 @@ Dog::Dog()
     this->brain = new Brain();
 }
 
-Dog::Dog(const Dog &r):Animal(r)
+Dog::Dog(const Dog &r)
 {
-    this->type = r.getType();
+    Animal::operator=(r);
     this->brain = new Brain(*(r.brain));
     std::cout << "Dog copy constructor called" << std::endl;
 }
