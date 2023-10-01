@@ -16,7 +16,7 @@ $(NAME) : $(OBJECTS)
 	${CC} ${CPPFLAGS} -c $< -o ${<:.c=.o}
 
 clean:
-	rm -f *.o
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
