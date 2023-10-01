@@ -1,6 +1,5 @@
 #include "Cat.hpp"
 
-
 Cat::Cat()
 {
 	std::cout << "Cat default constructor called" << std::endl;
@@ -9,8 +8,8 @@ Cat::Cat()
 
 Cat::Cat(const Cat &r)
 {
-	*this = r;
 	std::cout << "Cat copy constructor called" << std::endl;
+	*this = r;
 }
 
 Cat &Cat::operator=(const Cat &r)

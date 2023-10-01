@@ -8,8 +8,8 @@ Dog::Dog()
 
 Dog::Dog(const Dog &r)
 {
-    *this = r;
     std::cout << "Dog copy constructor called" << std::endl;
+    *this = r;
 }
 
 Dog &Dog::operator=(const Dog &r)

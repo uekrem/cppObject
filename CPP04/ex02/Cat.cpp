@@ -9,13 +9,14 @@ Cat::Cat()
 
 Cat::Cat(const Cat &r)
 {
+    std::cout << "Cat copy constructor called" << std::endl;
     Animal::operator=(r);
     this->brain = new Brain(*(r.brain));
-    std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &r)
 {
+    std::cout << "Cat copy assignment called" << std::endl;
 	this->type = r.getType();
     this->brain = new Brain(*(r.brain));
 	return (*this);
@@ -23,8 +24,8 @@ Cat &Cat::operator=(const Cat &r)
 
 Cat::~Cat()
 {
-    delete this->brain;
     std::cout << "Cat destructor called" << std::endl;
+    delete this->brain;
 }
 
 void Cat::makeSound() const
