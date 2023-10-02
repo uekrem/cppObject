@@ -11,7 +11,7 @@ class Brain
 	Brain();
 	Brain(const Brain &copy);
 	Brain &operator=(const Brain &copy);
-	virtual ~Brain();
+	~Brain();
 };
 
 #endif
